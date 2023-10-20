@@ -1,10 +1,10 @@
 %%
 % This file contains an exercise to analyze an ERP (Event Related Potential)
-% computing its peak-mean and peak-to-peak.
+% computing its peak-to-peak both using only the peak and the peak-mean.
 % peak-to-peak: it's the voltage difference between the peak and the trough
 %               in given intevals
-% peak-mean: same as peak-to-peak, except we compute the peak and trough
-% as an average over a window of time.
+% peak-mean: instead of taking the peak as a single value we compute it
+% as an average over a window of time around the actual peak.
 % We compute these values for both the unfiltered and filtered erp
 %%
 
@@ -168,8 +168,8 @@ erpFP2Plat = maxt - mint;
 %% Report the results in the command window
 
 fprintf('\nRESULTS FOR WINDOW AROUND PEAK:')
-fprintf('\n   Mean-peak on unfiltered ERP: %5.4g muV, %4.3g ms span.',erpP2P,erpP2Plat)
-fprintf('\n   Mean-peak on filtered ERP:   %5.4g muV, %4.3g ms span.\n\n',erpFP2P,erpFP2Plat)
+fprintf('\n   Peak-to-peak using mean-peak on unfiltered ERP: %5.4g muV, %4.3g ms span.',erpP2P,erpP2Plat)
+fprintf('\n   Peak-to-peak using mean-peak on filtered ERP:   %5.4g muV, %4.3g ms span.\n\n',erpFP2P,erpFP2Plat)
 
 %% done.
 % Conclusions
